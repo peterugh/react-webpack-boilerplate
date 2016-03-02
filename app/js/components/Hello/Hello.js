@@ -9,8 +9,11 @@ class Hello extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className={ styles.Hello }>
         <h1 className={ styles.HelloH1 }>Hello World</h1>
+        <img src='/images/webpack.png' alt='webpack logo' width='300'/>
+        <img src='/images/react.png' alt='react logo' width='200'/>
+        <img src='/images/gulp.png' alt='gulp logo' width='175'/>
       </div>
     );
   }
