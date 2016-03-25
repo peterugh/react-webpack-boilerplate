@@ -1,5 +1,5 @@
 # react-webpack-boilerplate
-React Boilerplate with Webpack Hot Module Replacement and CSS Modules. If you have issues, check your node version.
+React Boilerplate with Webpack Hot Module Replacement and CSS Modules.
 
 ## Install Instructions
 
@@ -12,4 +12,8 @@ React Boilerplate with Webpack Hot Module Replacement and CSS Modules. If you ha
 
 ## Summary
 
-This boilerplate includes a lot of helper `gulp` tasks for running a more robust site. You can add SASS mixins and libraries like `bourbon` or `neat`, as well as add images per component. Subfolder are supported so feel free to organize within the `app/js` folder as desired. Have fun!
+This boilerplate includes a lot of helper `gulp` tasks for running a more robust site. You can add SASS mixins and libraries like `bourbon` or `neat`, as well as add images per component. Subfolders are supported so feel free to organize within the `app/js` folder as desired. Have fun!
+
+## Troubleshooting
+
+If you have issues, check your node version. If node looks ok, install dependencies one at a time. Refer to `package.json` for list of dependencies. Instlal with correct version in this format: `npm install package-name@x.x.x` where x.x.x is the listed version number in `package.json`. For example: `npm install react-dom@0.14.7`
