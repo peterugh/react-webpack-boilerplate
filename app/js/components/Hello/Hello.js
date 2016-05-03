@@ -14,6 +14,7 @@ class Hello extends React.Component {
   };
   addToDo = () => {
     this.props.dispatch(actionCreators.addItemActionCreator(this.refs.toDoInput.value));
+    this.refs.toDoInput.value = '';
   };
   removeToDoItem = (item) => {
     this.props.dispatch(actionCreators.removeItemActionCreator(item));
@@ -37,9 +38,6 @@ class Hello extends React.Component {
     return (
       <div className={ styles.Hello }>
         <h1 className={ styles.h1 }>Hello { user.name }</h1>
-        <img src='/images/webpack.png' alt='webpack logo' width='300'/>
-        <img src='/images/react.png' alt='react logo' width='200'/>
-        <img src='/images/gulp.png' alt='gulp logo' width='175'/>
         <h3 className={ styles.h3 } style={ { display: ( items.length > 0 ? 'block' : 'none' ) } }>
           To Do List:
         </h3>
@@ -49,16 +47,20 @@ class Hello extends React.Component {
         <div className={ styles.inputs }>
           <label className={ styles.label }>
             Set New Name<br/>
-            <input type='text' onChange={ this.updateName } className={ styles.textInput } />
+            <input type='text' onChange={ this.updateName } className={ styles.textInput } placeholder='Enter your name' />
           </label>
           <label className={ styles.label }>
             Add a To Do Item<br/>
-            <input type='text' ref='toDoInput' className={ styles.textInput }/>
+            <input type='text' ref='toDoInput' className={ styles.textInput } placeholder='Task Name'/>
           </label>
         </div>
         <div className={ styles.submits }>
           <button onClick={ this.addToDo } className={ styles.button }>Add To Do Item</button>
         </div>
+
+        <img src='/images/webpack.png' alt='webpack logo' width='300'/>
+        <img src='/images/react.png' alt='react logo' width='200'/>
+        <img src='/images/gulp.png' alt='gulp logo' width='175'/>
       </div>
     );
   }
