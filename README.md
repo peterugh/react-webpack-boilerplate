@@ -1,5 +1,5 @@
 # react-webpack-boilerplate
-React Boilerplate with Webpack Hot Module Replacement and CSS Modules.
+React Boilerplate with Webpack Hot Module Replacement, CSS Modules, and Redux
 
 ## Install Instructions
 
