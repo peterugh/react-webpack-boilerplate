@@ -20,4 +20,4 @@ This boilerplate also includes a branch that has a basic Redux data store. It in
 
 ## Troubleshooting
 
-If you have issues, check your node version. If node looks ok, install dependencies one at a time. Refer to `package.json` for list of dependencies. Instlal with correct version in this format: `npm install package-name@x.x.x` where x.x.x is the listed version number in `package.json`. For example: `npm install react-dom@0.14.7`
+If you have issues, check your node version. If node looks ok, install dependencies one at a time. Refer to `package.json` for list of dependencies. Instlal with correct version in this format: `npm install package-name@x.x.x` where x.x.x is the listed version number in `package.json`. For example: `npm install react-dom@15.1.0`
