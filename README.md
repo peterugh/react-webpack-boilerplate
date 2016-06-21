@@ -16,7 +16,7 @@ This boilerplate includes a lot of helper `gulp` tasks for running a more robust
 
 ## Advanced
 
-This boilerplate also includes a branch that has a basic Redux data store. Pull down that specific branch in order to use Redux with this boilerplate. Becuase the Redux portion of this boilerplate adds layers of complexity, it hasn't been merged into master.
+This boilerplate also includes a branch that has a basic Redux data store. It includes an example using an AJAX call to show how to use middleware with Redux. Pull down that specific branch in order to use Redux with this boilerplate. Becuase the Redux portion of this boilerplate adds layers of complexity, it hasn't been merged into master.
 
 ## Troubleshooting
 
