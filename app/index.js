@@ -2,6 +2,7 @@ import globalCss from './css/global.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Hello from './js/components/Hello/Hello';
+import Cats from './js/components/Cats/Cats';
 import appStore from './js/stores/appStore';
 import { setNameActionCreator, addItemActionCreator } from './js/actions/actions';
 import { Provider } from 'react-redux';
@@ -18,7 +19,10 @@ class App extends React.Component {
     appStore.dispatch(setNameActionCreator('Example User'));
     return (
       <Provider store={ appStore }>
-        <Hello/>
+        <div>
+          <Hello/>
+          <Cats/>
+        </div>
       </Provider>
     );
   }
