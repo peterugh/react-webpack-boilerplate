@@ -46,11 +46,11 @@ class Hello extends React.Component {
         </ul>
         <div className={ styles.inputs }>
           <label className={ styles.label }>
-            Set New Name<br/>
+            Set New Name:<br/>
             <input type='text' onChange={ this.updateName } className={ styles.textInput } placeholder='Enter your name' />
           </label>
           <label className={ styles.label }>
-            Add a To Do Item<br/>
+            Add a To Do Item:<br/>
             <input type='text' ref='toDoInput' className={ styles.textInput } placeholder='Task Name'/>
           </label>
         </div>

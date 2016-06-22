@@ -33,15 +33,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("css/main.css"),
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  resolve: {
-    alias: {
-      'TweenLite': 'gsap/src/uncompressed/TweenLite',
-      'TimelineLite': 'gsap/src/uncompressed/TimelineLite',
-      'CSSPlugin': 'gsap/src/uncompressed/plugins/CSSPlugin',
-      'EasePack': 'gsap/src/uncompressed/easing/EasePack'
-    }
-  }
+    new ExtractTextPlugin("css/main.css")
+  ]
 };

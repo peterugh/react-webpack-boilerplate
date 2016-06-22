@@ -3,47 +3,33 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin'); // build css files
 
 module.exports = {
-  devtool: 'cheap-source-map',
-  devServer: {
-    progress: true,
-    hot: true
-  },
-  entry: [
-    'webpack/hot/dev-server',
-    './app/index.js'
-  ],
-  output: { 
-    path: path.resolve(__dirname, 'dev'),
+  entry: './app/index.js',
+  output: {
+    path: __dirname,
     filename: 'app.js'
   },
   module: {
     loaders: [
       {
-        test: /.js?$/,
-        loader: 'babel-loader',
+        test: /\.js$/,
         exclude: /node_modules/,
+        loader: 'react-hot',
+        include: __dirname,
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        include: __dirname,
         query: {
-          cacheDirectory: true,
-          presets: ['es2015', 'react', 'stage-0']
-        }
+          presets: [ 'es2015', 'react', 'stage-0' ]
+        },
       },
       { 
         test: /\.css$/, 
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]'), 
+        loader: 'style!css?modules&localIdentName=[local]___[hash:base64:5]',
         exclude: /node_modules/
       }
     ]
-  },
-  plugins: [
-    new ExtractTextPlugin("../css/main.css"),
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  resolve: {
-    alias: {
-      'TweenLite': 'gsap/src/uncompressed/TweenLite',
-      'TimelineLite': 'gsap/src/uncompressed/TimelineLite',
-      'CSSPlugin': 'gsap/src/uncompressed/plugins/CSSPlugin',
-      'EasePack': 'gsap/src/uncompressed/easing/EasePack'
-    }
   }
 };

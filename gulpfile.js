@@ -44,7 +44,7 @@ gulp.task('buildComponentStyles', function() {
 
 /* basic server for development */
 gulp.task('devServer', shell.task([
-  'webpack-dev-server --colors --open --content-base dev/'
+  'webpack-dev-server --colors --hot --inline --content-base dev/'
 ]));
 
 /* basic server for development */

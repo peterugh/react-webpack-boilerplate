@@ -7,16 +7,14 @@ import appStore from './js/stores/appStore';
 import { setNameActionCreator, addItemActionCreator } from './js/actions/actions';
 import { Provider } from 'react-redux';
 
-
-console.clear();
-console.log('appStore state after initialization:', appStore.getState());
-
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
-  render() {
+  componentDidMount() {
     appStore.dispatch(setNameActionCreator('Example User'));
+  }
+  render() {
     return (
       <Provider store={ appStore }>
         <div>

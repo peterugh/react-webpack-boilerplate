@@ -6,7 +6,8 @@ export const catsReducer = function (state = {
     case 'FETCHING_CATS':
       return {
         ...state,
-        fetchingCats: true
+        fetchingCats: true,
+        images:[]
       }
     case 'FETCHED_CATS':
       return {

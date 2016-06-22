@@ -2,14 +2,15 @@ import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import styles from './styles.css';
 import { connect } from 'react-redux';
-import * as actionCreators from '../../actions/actions'
+import * as actionCreators from '../../actions/actions';
+import Loading from '../Loading/Loading';
 
 class Cats extends React.Component {
 
   constructor(props) {
     super(props);
   }
-  componentDidMount = () => {
+  componentDidMount() {
     this.props.dispatch(actionCreators.getCats());
   }
   render() {
@@ -23,10 +24,8 @@ class Cats extends React.Component {
     });
     return (
       <div className={ styles.Cats }>
-        <h1 className={ styles.h1 }>Random Cats</h1>
-        <p style={ { display: cats.fetchingCats ? 'block' : 'none' } }>
-          Loading Cats
-        </p>
+        <h1 className={ styles.h1 }>Random Cats!</h1>
+        <Loading isLoading={ cats.fetchingCats }/>
         <ul style={ { display: cats.images.length > 0 ? 'block' : 'none' } }>
           { catImages }
         </ul>
@@ -44,5 +43,3 @@ const mapStateToProps = (state) => {
 const ConnectedCats = connect(mapStateToProps)(Cats);
 
 export default ConnectedCats;
-
-// export default Hello;
