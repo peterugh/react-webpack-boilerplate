@@ -31,7 +31,7 @@ class Hello extends React.Component {
     items.map((item, i) => {
       toDoListDisplay.push(
         <li key={ i } className={ styles.li }>
-          { item } <button onClick={ this.removeToDoItem.bind(this, item) }>Remove This Item</button>
+          { item } <button onClick={ this.removeToDoItem.bind(this, item) }>X</button>
         </li>);
     })
 
@@ -60,6 +60,7 @@ class Hello extends React.Component {
 
         <img src='/images/webpack.png' alt='webpack logo' width='300'/>
         <img src='/images/react.png' alt='react logo' width='200'/>
+        <img src='/images/redux.png' alt='redux logo' width='250'/>
         <img src='/images/gulp.png' alt='gulp logo' width='175'/>
       </div>
     );
