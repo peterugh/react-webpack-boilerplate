@@ -1,4 +1,4 @@
-# react-webpack-boilerplate
+# react-webpack-gulp-boilerplate
 React Boilerplate with Webpack Hot Module Replacement, CSS Modules, and Redux
 
 ## Install Instructions
